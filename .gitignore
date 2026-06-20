@@ -1,0 +1,5 @@
+/target/
+/schemas/
+/schemas_ts/
+/research_*.md
+.DS_Store
