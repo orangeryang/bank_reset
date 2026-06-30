@@ -1,15 +1,17 @@
-# reset-bank
+# banked-reset
 
 Tiny Rust CLI for checking Codex banked reset credit expiry.
+
+Installed as `banked-reset`, with `br` as a short alias for the same binary.
 
 ## Usage
 
 ```sh
-reset-bank
-reset-bank --verbose
-reset-bank --json
-reset-bank --show-ids
-reset-bank --auth ~/.codex/auth.json
+banked-reset          # or: br
+banked-reset --verbose
+banked-reset --json
+banked-reset --show-ids
+banked-reset --auth ~/.codex/auth.json
 ```
 
 Default output is compact and sorted by earliest expiry:

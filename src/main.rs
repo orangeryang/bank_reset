@@ -122,10 +122,10 @@ struct ResetCredit {
 fn print_help() {
     println!(
         "\
-reset-bank
+banked-reset
 
 Usage:
-  reset-bank [--auth PATH] [--verbose] [--json] [--show-ids]
+  banked-reset [--auth PATH] [--verbose] [--json] [--show-ids]
 
 Reads Codex auth from $CODEX_HOME/auth.json or ~/.codex/auth.json, then prints
 available banked reset credits and their expires_at values.
@@ -189,7 +189,7 @@ fn fetch_reset_credits(base_url: &str, auth: &CodexAuth) -> Result<Value, String
         .header("Accept", "application/json")
         .header("OpenAI-Beta", "codex-1")
         .header("originator", "Codex Desktop")
-        .header("User-Agent", "reset-bank/0.1")
+        .header("User-Agent", "banked-reset/0.1")
         .send()
         .map_err(|err| format!("request failed: {err}"))?;
 
